@@ -45,10 +45,6 @@ This script is compatible with PowerShell on both Windows and macOS systems. How
 
 Contributions are welcome! If you have suggestions for improvements or new features, feel free to open an issue or submit a pull request on GitHub.
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ---
 
-**Note:** This simulator is for educational purposes and does not perform actual network operations. Always use network tools responsibly and ensure compliance with applicable laws and regulations.
+**Note:** This simulator is for educational purposes and does not perform actual network operations. Always use network tools responsibly and ensure compliance with applicable laws and regulations. It is just a simulator to see how the GUI interface behaves on Powershell.
