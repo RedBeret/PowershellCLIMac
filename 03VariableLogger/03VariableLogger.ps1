@@ -1,6 +1,23 @@
-# VariableLogger.ps1
-# Script to log specific variables to a file in the same directory as the script,
-# with a prompt to hit enter to verify and then remove the file.
+<#
+.SYNOPSIS
+Logs system details and custom messages into a text file and provides user interaction for verification and deletion.
+
+.DESCRIPTION
+This script logs system information and user-defined messages to a text file in the script's directory.
+After logging, it prompts the user to verify the log contents before automatically deleting the file.
+
+.NOTES
+Version:        1.0
+Author:         RedBeret
+GitHub:         https://github.com/RedBeret
+Creation Date:  23APR2024
+Last Edit:      29APR2024
+
+.EXAMPLE
+To run this script, navigate to the script's directory and execute:
+.\VariableLogger.ps1
+
+#>
 
 # Get the current date and time
 $todayDate = (Get-Date).ToString("yyyy-MM-dd HH:mm:ss")
@@ -8,14 +25,13 @@ $todayDate = (Get-Date).ToString("yyyy-MM-dd HH:mm:ss")
 # Define the file name for output and set the path to the directory of the script
 $outputFilePath = Join-Path -Path $PSScriptRoot -ChildPath "VariableLog.txt"
 
-# Function to log data to a file
 function Log-Data {
     param (
         [Parameter(Mandatory=$true)]
         [string]$Data
     )
 
-    # Ensure the file path exists and then log the data
+    # Check if the log file exists, if not, create it
     if (-not (Test-Path $outputFilePath)) {
         New-Item -Path $outputFilePath -ItemType File
     }
@@ -24,7 +40,6 @@ function Log-Data {
     Add-Content -Path $outputFilePath -Value $Data
 }
 
-# Function to log system-related variables or operations
 function Log-SystemInfo {
     $systemName = $env:COMPUTERNAME
     $osVersion = [System.Environment]::OSVersion.VersionString
@@ -33,18 +48,18 @@ function Log-SystemInfo {
     Log-Data "Operating System: $osVersion"
 }
 
-# Main Execution
+# Log system information
 Log-SystemInfo
 
-# Log custom variables or perform operations
+# Log custom variable
 $exampleVariable = "Hello, World in PowerShell!"
 Log-Data "Example Variable: $exampleVariable"
 
-# Pause for user to verify the file's existence and contents
+# Prompt user to verify the log file
 Write-Host "Press Enter to verify the log file and remove it..."
 $host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown") | Out-Null
 
-# Check if the file exists and remove it
+# Verify and remove the log file
 if (Test-Path $outputFilePath) {
     Remove-Item $outputFilePath
     Write-Host "The file has been removed."
