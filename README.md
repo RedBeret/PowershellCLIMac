@@ -1,50 +1,37 @@
 # PowerShell Network Simulator
 
-Welcome to the PowerShell Network Simulator! This tool allows you to simulate various networking operations using PowerShell scripting. Whether you're learning PowerShell or exploring networking concepts, this simulator provides a hands-on experience.
+Welcome to the PowerShell Network Simulator! This comprehensive tool allows you to simulate various network operations using PowerShell scripting. Designed for both learning and teaching, this simulator offers a hands-on approach to understanding networking concepts through PowerShell.
 
 ## Introduction
 
-PowerShell is a powerful scripting language developed by Microsoft, primarily used for task automation and configuration management. It provides cmdlets (pronounced command-lets), which are specialized .NET classes implementing a particular operation. In this simulator, we focus on network-related cmdlets to emulate common networking tasks.
+PowerShell, developed by Microsoft, is a versatile scripting language geared toward task automation and configuration management. This simulator leverages PowerShell's powerful cmdlets to emulate common networking tasks, providing an effective learning tool for both new and experienced users.
 
 ## Features
 
-### 1. Ping Simulation
-Simulate a ping operation to test connectivity to an IP address or hostname.
-
-### 2. Traceroute Simulation
-Simulate a traceroute operation to trace the path packets take to reach a destination.
-
-### 3. Network Configuration
-Display simulated network configuration information such as IP address, subnet mask, and default gateway.
-
-### 4. DNS Lookup Simulation
-Simulate a DNS lookup operation to resolve domain names into IP addresses.
-
-### 5. Port Scanning
-Simulate a port scan to discover open ports on a target IP address.
+- **Ping Simulation**: Tests connectivity to an IP address or hostname.
+- **Traceroute Simulation**: Traces the path packets take to a specified destination.
+- **Network Configuration**: Displays simulated network configuration details like IP address, subnet mask, and default gateway.
+- **DNS Lookup Simulation**: Resolves domain names into IP addresses.
+- **Port Scanning**: Identifies open ports on a target IP address.
+- **Reverse DNS Lookup Simulation**: Simulates a reverse DNS lookup for an IP address.
 
 ## How to Use
 
-1. **Clone the Repository:** Clone this repository to your local machine.
-
-2. **Open PowerShell:** Navigate to the cloned directory and open PowerShell.
-
-3. **Run the Script:** Execute the `NetworkSimulator.ps1` script using the command `.\NetworkSimulator.ps1`.
-
-4. **Follow the Menu:** The simulator presents a menu with options to choose from. Select the desired operation by entering the corresponding number.
-
-5. **Explore Networking Operations:** Explore different networking operations and observe the simulated results.
-
-6. **Quit:** Press 'Q' to quit the simulator.
+1. **Clone the Repository**: Clone this repository to your local machine.
+2. **Open PowerShell**: Navigate to the cloned directory and open PowerShell.
+3. **Run the Script**: Execute the `NetworkSimulator.ps1` script using the command `.\NetworkSimulator.ps1`.
+4. **Interactive Menu**: Follow the interactive menu to choose and execute simulations.
+5. **Explore**: Experiment with different network operations and observe the simulated outcomes.
+6. **Exit**: Press 'Q' to exit the simulator.
 
 ## Compatibility
 
-This script is compatible with PowerShell on both Windows and macOS systems. However, please note that certain features may be limited on macOS due to differences in underlying system functionalities.
+This script supports PowerShell environments on both Windows and macOS, although some features may be limited on macOS due to system functionality differences.
 
 ## Contributions
 
-Contributions are welcome! If you have suggestions for improvements or new features, feel free to open an issue or submit a pull request on GitHub.
+Contributions are encouraged! If you have ideas for enhancements or new features, please open an issue or submit a pull request on GitHub.
 
 ---
 
-**Note:** This simulator is for educational purposes and does not perform actual network operations. Always use network tools responsibly and ensure compliance with applicable laws and regulations. It is just a simulator to see how the GUI interface behaves on Powershell.
+**Note:** This simulator is intended for educational purposes and simulates network operations. It should be used responsibly within the bounds of applicable laws and regulations.
