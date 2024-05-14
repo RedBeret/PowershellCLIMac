@@ -37,15 +37,4 @@ To set up and organize the test environment, follow these steps:
 3. The script will create the 'DESKTOPTEST' directory, populate it with various test files, and open it for inspection.
 4. After verifying the files, press any key to continue, and the script will organize the files into extension-specific folders.
 
-## Versioning
 
-- **Version 1.0** - Initial release
-
-## Authors
-
-- **RedBeret** - Initial work - [RedBeret](https://github.com/RedBeret)
-
-## Acknowledgments
-
-- Thanks to all who provided insights and feedback on the script development.
-- Special thanks to the PowerShell community for their support and contributions.
